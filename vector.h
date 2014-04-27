@@ -4,23 +4,23 @@
 
 #define VECTOR_H
 
-class vector
+class Vector
 {
 	private:
 		float x, y ,z;
 
 	public:
-		vector();
-		vector(const int x, const int y, const int z);
-		vector(const vector  &other);
+		Vector();
+		Vector(const float x, const float y, const float z);
+		Vector(const Vector  &other);
 		
 		float magnitude() const;
 
 		//operator overloads
-		const vector operator+(const vector &other) const;
-		const vector operator-(const vector &other) const;
-		const vector operator*(float value) const;
-		const vector operator/(float value) const;
+		const Vector operator+(const Vector &other) const;
+		const Vector operator-(const Vector &other) const;
+		const Vector operator*(float value) const;
+		const Vector operator/(float value) const;
 
 };
 

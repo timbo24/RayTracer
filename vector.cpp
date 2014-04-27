@@ -1,52 +1,52 @@
 #include <math.h>
 #include <iostream>
-#include "vector.h"
+#include "Vector.h"
 
 using namespace std;
 
 
-vector::vector()
+Vector::Vector()
 {
 	this->x = 0;
 	this->y = 0;
 	this->z = 0;
 }
 
-vector::vector(const int x, const int y, const int z)
+Vector::Vector(const float x, const float y, const float z)
 :x(x), y(y), z(z)
 {
 }
 
-vector::vector(const vector &other)
+Vector::Vector(const Vector &other)
 :x(other.x), y(other.y), z(other.z)
 {
 }
 
-float vector::magnitude() const 
+float Vector::magnitude() const 
 {
 	return sqrt(x*x + y*y + z*z);
 }
 
 
-const vector  vector::operator+(const  vector &other) const
+const Vector  Vector::operator+(const  Vector &other) const
 {
-        return vector(this->x + other.x, this->y + other.y, this->z + other.z);
+        return Vector(this->x + other.x, this->y + other.y, this->z + other.z);
 }
 
-const vector vector::operator-(const vector &other) const
+const Vector Vector::operator-(const Vector &other) const
 {
-        return vector(this->x - other.x, this->y - other.y, this->z - other.z);
+        return Vector(this->x - other.x, this->y - other.y, this->z - other.z);
 }
 
 
 
-const vector vector::operator*(float value) const
+const Vector Vector::operator*(float value) const
 {
-	return vector(this->x*value, this->y*value, this->z*value);
+	return Vector(this->x*value, this->y*value, this->z*value);
 }
 
-const vector vector::operator/(float value) const
+const Vector Vector::operator/(float value) const
 {
-	return vector(this->x/value, this->y/value, this->z/value);
+	return Vector(this->x/value, this->y/value, this->z/value);
 }
 

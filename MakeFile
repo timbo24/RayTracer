@@ -1,0 +1,2 @@
+g++ -o vector_test Vector.cpp Tester.cpp
+

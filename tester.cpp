@@ -1,6 +1,6 @@
 #include <math.h>
-#include "vector.h"
 #include <iostream>
+#include "Vector.h"
 
 using namespace std;
 
@@ -8,7 +8,12 @@ using namespace std;
 int main()
 {
 
-	vector h(3, 2, 4);
+	float x = 3;
+	float y = 2;
+	float z = 4;
+
+
+	Vector h(x,y,z);
 
 	cout<<h.magnitude()<<endl;
 }

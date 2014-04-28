@@ -7,21 +7,25 @@
 class Vector
 {
 	private:
-		float x, y ,z;
+		double x, y ,z;
 
 	public:
 		Vector();
-		Vector(const float x, const float y, const float z);
+		Vector(const double x, const double y, const double z);
 		Vector(const Vector  &other);
 		
-		float magnitude() const;
+		double magnitude() const;
 
 		//operator overloads
 		const Vector operator+(const Vector &other) const;
 		const Vector operator-(const Vector &other) const;
-		const Vector operator*(float value) const;
-		const Vector operator/(float value) const;
+		const Vector operator*(double value) const;
+		const Vector operator/(double value) const;
 
+		//getters 
+		const double get_x() const;
+		const double get_y() const;
+		const double get_z() const;
 };
 
 

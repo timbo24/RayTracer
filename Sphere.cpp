@@ -1,5 +1,5 @@
-
-
+#include <cmath>
+#include <math.h>
 #include "Vector.h"
 #include "Sphere.h"
 
@@ -14,13 +14,8 @@ Sphere::Sphere(const Vector center, const double radius)
 
 bool Sphere::Intersect(const Vector vector)
 {
-	if (vector.get_x() < (center_.get_x() - radius_) ||
-	    vector.get_x() > (center_.get_x() + radius_))
-		return false;
-	if (vector.get_y() < (center_.get_y() - radius_) ||
-	    vector.get_y() > (center_.get_y() + radius_))
-		return false;
-	return true;
+	return sqrt(pow(abs(vector.get_x() - center_.get_x()), 2) +
+	            pow(abs(vector.get_y() - center_.get_y()), 2)) <= radius_;
 }
 
 	    

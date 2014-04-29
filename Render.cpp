@@ -17,7 +17,7 @@ void render()
 	{
 		for (int y = 0; y < height; ++y)
 		{
-			//TODO create a primary ray
+		//TODO create a primary ray
 			
 
 			//TODO determine the closest object it hits

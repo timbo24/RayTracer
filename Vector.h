@@ -20,12 +20,15 @@ class Vector
 		const Vector operator+(const Vector &other) const;
 		const Vector operator-(const Vector &other) const;
 		const Vector operator*(double value) const;
+		const double operator*(const Vector &other) const;
 		const Vector operator/(double value) const;
 
 		//getters 
 		const double get_x() const;
 		const double get_y() const;
 		const double get_z() const;
+
+		const double angle(const Vector &other) const;
 };
 
 

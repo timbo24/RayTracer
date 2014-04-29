@@ -42,9 +42,19 @@ const Vector Vector::operator*(double value) const
 	return Vector(this->x*value, this->y*value, this->z*value);
 }
 
+const double Vector::operator*(const Vector &other) const
+{
+	return this->x * other.x + this->y * other.y + this->z * other.z;
+}
+
 const Vector Vector::operator/(double value) const
 {
 	return Vector(this->x/value, this->y/value, this->z/value);
+}
+
+const double Vector::angle(const Vector &other) const
+{
+	return acos(((*this)*(other)) / (this->magnitude() * other.magnitude()));
 }
 
 const double Vector::get_x() const
